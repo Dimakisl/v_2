@@ -1,0 +1,314 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.header{
+    background-color: grey;
+    padding: 22px 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-menu{
+    padding-top: 25px;
+}
+
+.main-menu a{
+    
+    color: #000;
+    padding: 26px 6px;
+    font-size: 16px;
+} 
+
+.fa{
+  margin-left: 5px;
+}
+
+.navbar .nav {
+  width: 100%;
+}
+
+.navbar ul {
+  list-style: none; 
+}
+
+.main-menu > li {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+}
+.main-menu > li:last-child {
+  margin-right: 0;
+}
+.navbar a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  outline: none;
+  transition: .5s linear;
+  width: 100%;
+}
+
+.navbar .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding-left: 0;
+  padding: 10px;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.navbar ul a {
+  color: #fff;
+}
+.submenu {
+  display: none;
+  background: #b19891;
+}
+.navbar ul li:hover .submenu {
+  display: block;
+}
+/*----------------------*/
+
+li{
+  list-style: none;
+  display: flex;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+#menu-checkbox{
+  display: none;
+}
+/*---------------------------------------------------*/
+.owl-carousel{
+  margin: 0 auto;
+}
+
+.owl-theme .item img{
+  display: block;
+  height: auto;
+padding-left: 15%;
+}
+
+.container-slider{
+  padding-top: 150px;
+  margin: 0 auto;
+  height: 250px;
+  width: 500px;
+}
+
+.item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item p{
+  padding-right: 15%;
+}
+
+
+
+.article{
+  display: flex;
+  flex-direction: row;
+  margin-top: 150px;
+
+}
+
+.article p{
+  text-align: left;
+}
+
+.article .left h1{
+  text-align: center;
+}
+
+.article .right h3{
+  text-align: center;
+}
+
+.article .left{
+  margin-right: 15px;
+  font-size: 1em;
+}
+
+.item-pop {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px dotted black;
+	padding: 10px 0px 0px 0px;
+	height: 95px;
+}
+
+.item-pop img {
+  width: 110px;
+	height: 90px;
+	display: inline-block;
+  vertical-align: top;
+}
+
+.item-pop a span {
+  display: inline-block;
+	width: 150px;
+	margin-left: 5px;
+	vertical-align: bottom;
+}
+
+.item-pop a ~ span{
+  margin-top: -16px;
+  margin-left: 115px;
+  color: grey;
+}
+
+.item-pop a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+	color: red;
+}
+.item-pop a span:hover {
+  text-decoration: underline;
+}
+
+.section-blockquote{
+  margin-top: 25px;
+  text-align: center;
+}
+
+cite{
+  font-weight: bold;
+}
+
+blockquote {
+  margin: 0;
+  color: #231E28;
+  padding: 30px 30px 30px 60px;
+  border-left: 8px solid #CBDDE7;
+  position: relative;
+  background: #FAF8EB;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+  blockquote:before{
+  content: "\201C";
+  font-family: Arial;
+  color: #CBDDE7;
+  font-size: 70px;
+  position: absolute;
+  left: 15px;
+  top: 5px;
+}
+
+  blockquote p {
+  font-style: italic;
+  font-size: 24px;
+  margin-top: 0;  
+}
+
+@media (max-width: 700px){
+  .carousel{
+    display: none;
+  }
+
+  .article{
+    margin-top: 50px;
+    margin: 10px; 
+  }
+
+  .left{
+    justify-content: center;
+  }
+
+  .right{
+    display: none;
+  }
+
+
+  .main-menu{
+    display: none;
+  }
+
+  .main-menu li{
+    width: 100%;
+    display: block;
+    font-size: 12px;
+  }
+
+  .main-menu a{
+    display: block;
+    padding: 8% 0;
+  }
+
+  .main-menu a
+
+  .toggle-button{
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    color: #000;
+    margin-top: 50px;
+  }
+
+  .toggle-button:after{
+    content: attr(data-open);
+    display: block;
+    margin-top: 50px;
+  }
+
+  #menu-checkbox:checked + nav[role="navigation"] .main-menu{
+    display: block;
+    height: 100vh;
+    text-align: center;
+  }
+
+  #menu-checkbox:checked + nav[role="navigation"] .main-menu .submenu{
+    display: block;
+    position: relative;
+    left: 15px;
+    background-color: transparent;
+  }
+
+   #menu-checkbox:checked + nav[role="navigation"] .toggle-button:after{
+    content: attr(data-close);
+  }
+
+  .main-menu{
+    margin-right: -65px;
+    position: relative;
+    top: 50px;
+    right: 115px;
+  }
+
+  .article .left{
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  blockquote p{
+    margin-left: -40px;
+  }
+
+}
